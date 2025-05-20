@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimenta</title>
+    <link rel="icon" href="https://i.ibb.co/chsqJF1y/alimenta-logo.jpg" type="image/x-icon"> 
+   
+   <style>
+    :root {
+    --light-cream: #f0ead2;
+    --pale-green: #dde5b6;
+    --medium-green: #adc178;
+    --brown: #a98467;
+    --deep-forest-green: #41521f;
+    }
+
+    body{
+    background-color: var(--light-cream);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--deep-forest-green);
+    }
+
+    header {
+    background-color: var(--pale-green); 
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+        .brand {
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--deep-forest-green); 
+        align-items: center;
+        text-decoration: none;
+        }
+        .logo {
+        width: 120px; 
+        margin-right: 20px;
+        }
+
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        background-color: var(--pale-green); 
+        }
+        .nav-links {
+        display: flex;
+        gap: 10px; 
+        margin-left: 730px;
+        }
+        .nav-links a {
+        text-decoration: none;
+        color: var(--deep-forest-green); 
+        font-weight: bold;
+        padding: 65px 20px;
+        }
+        .nav-links a:hover {
+        color: #5a7d27; /* Slight color change on hover */
+        text-decoration: underline;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            color: var(--brown); 
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .sdg-goals img {
+            max-height: 180px;
+            margin: 20px 10px;
+        }
+        .sdg-goals a {
+            text-decoration: none;
+        }
+
+        .donation-form, .locator-search, .join-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 45%;
+            max-width: 300px;
+            border: 1px solid var(--medium-green);
+        }
+        button {
+            background-color: var(--medium-green);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: var(--brown);
+        }
+
+        .map-placeholder {
+            background-color: var(--pale-green);
+            height: 300px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .join-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px; 
+            margin: 1px 120px;
+        }
+        .join-form {
+            display: none; /* Initially hide the forms */
+        }
+
+        .terms-checkbox {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: var(--deep-forest-green); 
+            color: var(--light-cream); 
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: var(--light-cream); 
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="" class="brand">
+                <img src="https://i.ibb.co/chsqJF1y/alimenta-logo.jpg" alt="Alimenta Logo" class="logo">
+                <span class="brand-name">ALIMENTA</span>
+            </a>
+        <nav class="nav-links">
+            <a href="#mission">Mission</a>
+            <a href="#donate">Donate</a>
+            <a href="#shelter-locator">Find Shelters</a>
+            <a href="#join">Join Us</a>
+        </nav>
+        </div>
+    </header>
+
+    <section id="mission" class="section">
+        <div class="container">
+            <h2>Our Commitment to Ending Hunger</h2>
+            <p>At Alimenta, we're dedicated to bridging the gap between surplus food and those in need. We believe in a world where no one goes hungry, where excess is shared, and communities thrive together. We aim to lessen food insecurity and food waste, our mission is rooted in the UN Sustainable Development Goals, specifically Goal 2: Zero Hunger, Goal 11: Sustainable Cities and Communities, and Goal 12: Responsible Consumption and Production.</p>
+            <div class="sdg-goals">
+                <a href="https://sdgs.un.org/goals/goal2" target="_blank">
+                    <img src="https://i.ibb.co/KzSQNscF/sdg2.png" alt="SDG Goal 2: Zero Hunger">
+                </a>
+                <a href="https://sdgs.un.org/goals/goal11" target="_blank">
+                <img src="https://i.ibb.co/Zz3N7Bzd/sdg11.png" alt="SDG Goal 11: Sustainable Cities and Communities">
+                </a>
+                <a href="https://sdgs.un.org/goals/goal12" target="_blank">
+                <img src="https://i.ibb.co/NdstfD2z/sdg12.png" alt="SDG Goal 12: Responsible Consumption and Production">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="section">
+        <div class="container">
+            <h2>Donate and Make a Difference</h2>
+            <p>Any amount can help contribute to a meal</p>
+            <form class="donation-form">
+                <input type="number" placeholder="Money Donation: Enter Amount in USD$">
+                <p><i>Help Feed a Soul</i></p>
+                <button type="submit" class="donate-button">Donate Now</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="shelter-locator" class="section">
+        <div class="container">
+            <h2>Find Shelters Near You</h2>
+            <p>Locate shelters and food banks in your area to contribute directly or learn more about their needs</p>
+            <div class="locator-search">
+                <input type="text" placeholder="Enter Location" id="locationInput">
+                <button class="search-button" id="searchButton">Search</button>
+            </div>
+            <div id="map" style="height: 400px; width: 100%;"></div> 
+        </div>
+    </section>
+
+    <section id="join" class="section">
+        <div class="container">
+            <h2>Join Our Growing Community</h2>
+            <p>Your surplus food can nourish lives and reduce waste. Join us today and help us contribute in building a sustainable society.</p>
+            <div class="join-options">
+                <button class="join-donor">Become a Donor</button>
+                <button class="join-recipient">Become a Recipient</button>
+            </div>
+            
+            <form class="join-form" id="donor-form" action="https://submit-form.com/ySZ3zmmro" method="POST">
+                <input type="text" placeholder="Name" required>
+                <input type="tel" placeholder="Phone" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Organization (Optional)">
+                    <input type="checkbox" id="terms" name="terms" required/>I have read and accept the <a href="#">Terms & Conditions</a></label>
+                <button type="submit">Register as Donor</button>
+            </form>
+
+            <form class="join-form" id="recipient-form" action="https://submit-form.com/ySZ3zmmro" method="POST"> 
+                <input id="name" placeholder="Name" type="text" required />
+                <input id="phone" placeholder="Phone" type="tel" required />
+                <input id="email" placeholder="Email" type="email" required />
+                <input id="organization" placeholder="Organization" type="text" required />
+                    <input type="checkbox" id="terms" name="terms" required/>I have read and accept the <a href="#">Terms & Conditions</a></label>
+                <button type="submit">Register as Recipient</button>
+              </form>
+
+        </div>
+    </section>
+
+    <footer>
+       Download the Alimenta App:
+       <a href="#">iOS</a> | <a href="#">Android</a>
+    </footer>
+        <p align="center">&copy; 2025 Alimenta. All Rights Reserved.</p>
+    
+
+    <script>
+        function initMap() {
+            // Center the map on Istanbul
+            const istanbulCenter = { lat: 41.0082, lng: 28.9784 };
+
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: istanbulCenter,
+                zoom: 10,
+            });
+
+            // Simplified geocoding for search
+            document.getElementById('searchButton').addEventListener('click', () => {
+                const address = document.getElementById('locationInput').value;
+                new google.maps.Geocoder().geocode({ address: address }, (results, status) => {
+                    if (status === 'OK' && results[0]) {
+                        map.setCenter(results[0].geometry.location);
+                        new google.maps.Marker({ map: map, position: results[0].geometry.location });
+                    } else {
+                        document.getElementById('map').innerHTML = '<p class="error-message">Location not found.</p>';
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const donorButton = document.querySelector('.join-donor');
+            const recipientButton = document.querySelector('.join-recipient');
+            const donorForm = document.getElementById('donor-form');
+            const recipientForm = document.getElementById('recipient-form');
+
+            donorButton.addEventListener('click', () => {
+                donorForm.style.display = 'flex';
+                recipientForm.style.display = 'none';
+            });
+
+            recipientButton.addEventListener('click', () => {
+                recipientForm.style.display = 'flex';
+                donorForm.style.display = 'none';
+            });
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7JXK6k30Br1QAqs3jhIyqmPSxAhqB7i8&callback=initMap" async defer></script>
+</body>
+</html>
